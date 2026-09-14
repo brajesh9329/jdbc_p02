@@ -14,6 +14,7 @@ import java.util.List;
         public void addBooking(Booking booking) throws SQLException {
 
             Connection conn = DBConnection.getConnection();
+            // prepared statement means a execute query with parameterizes
 
             PreparedStatement ps = conn.prepareStatement(
                     "INSERT INTO booking(cid, event_date, guest_count, total_amount) VALUES (?, ?, ?, ?)"
